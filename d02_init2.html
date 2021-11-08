@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ng-init</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-app 
+    ng-init='ds=[
+                {id:"S01",name:"Sar Lavi",mark:70}, 
+                {id:"S02",name:"Tram La",mark:70}, 
+                {id:"S03",name:"Nguyen Toan",mark:99},
+                {id:"S04",name:"Huyen Le",mark:100} ]'>
+
+        <h2>AngularJS - ng-init Demo</h2>
+        <hr>
+        <h3>List of Student</h3>
+        <ul>
+            <li ng-repeat="x in ds">
+                {{ x }}
+            </li>
+        </ul>
+        <table class="table table-hover table-bordered">
+            <thead class="table-danger">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mark</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in ds">
+                    <td>{{x.id}}</td>
+                    <td>{{x.name}}</td>
+                    <td>{{x.mark}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+
+
+
+</html>
