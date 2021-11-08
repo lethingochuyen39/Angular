@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-app="myApp">
+        <h2>AngularJS - Expression - (ng-bind)</h2>
+        <hr>
+        <div ng-controller="myControl">
+            <h3>List of Student</h3>
+            <ul>
+                <li ng-repeat="x in ds">
+                    {{x}}
+                </li>
+            </ul>
+            <hr>
+            <ol>
+                <li ng-repeat="x in ds">
+                   <span ng-bind="x"></span>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+    
+  
+</body>
+
+<script>
+    //lap trinh cho ung dung angular js
+    //tao bien dai dien cho ud angular js
+    var app = angular.module("myApp",[]);
+    
+    //lap trinh cho controller co ten myControl
+    app.controller("myControl",function($scope){
+        $scope.ds=["Sar la vi","Tram La","Nguyen Toan","Huyen Le","Phuc Duy","Van Khoa"];
+
+
+    });
+
+</script>
+
+</html>
