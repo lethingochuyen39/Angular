@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service-http</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div class="container" ng-app="myAPP">
+        <h2>Service http Demo</h2>
+        <hr>
+        <div ng-controller="myCTRL">
+            <pre>
+                {{ds}}
+            </pre>
+
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ho Ten</th>
+                        <th>Diem KQ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="sv in ds">
+                        <td>{{sv.id}}</td>
+                        <td>{{sv.name}}</td>
+                        <td>{{sv.mark}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        let app=angular.module("myAPP", []);
+        app.controller("myCTRL", function($scope, $http){
+            $http.get("student.json").then(function(response){
+                $scope.ds = response.data;
+            });
+        });
+    </script>
+</body>
+</html>

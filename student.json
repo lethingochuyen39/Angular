@@ -1,0 +1,10 @@
+[
+    {"id":"S01", "name":"sar lavi", "mark":70},
+    {"id":"S02", "name":"ngoc huyen", "mark":100},
+    {"id":"S03", "name":"nguyen toan", "mark":99},
+    {"id":"S04", "name":"truc duy", "mark":90},
+    {"id":"S05", "name":"dam quan", "mark":86},
+    {"id":"S06", "name":"van khoa", "mark":75},
+    {"id":"S07", "name":"thanh long", "mark":45},
+    {"id":"S08", "name":"ngoc tram", "mark":65}
+]
