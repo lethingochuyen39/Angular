@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter-custom</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-app="myApp" ng-controller="myCtr">
+
+
+        <h2>Angular JS filter custom Demo</h2>
+        <hr>
+        
+        <p>Input mark : <input type="number" ng-model="diem"></p>
+        <ol>
+            <li ng-repeat="x in ds|Greater:diem">
+               <span  ng-bind = "x"></span>
+            </li>
+        </ol>
+      
+    </div>
+
+    <script>
+        let app = angular.module("myApp", []);
+        app.controller("myCtr", function ($scope) {
+            $scope.ds = [
+                {id:"S01",name:"Sar Lavi",mark:70}, 
+                {id:"S02",name:"Tram La",mark:65}, 
+                {id:"S03",name:"Nguyen Toan",mark:99},
+                {id:"S04",name:"Van Khoa",mark:90},
+                {id:"S05",name:"Huyen Le",mark:100},
+                {id:"S06",name:"Bao Minh",mark:80},
+                {id:"S07",name:"Tuan Huy",mark:40},
+                {id:"S08",name:"Phuc Duy",mark:75} 
+            ];
+        });
+
+        app.filter("Greater",function(){
+            return function(list,v){
+                let output=[]; // tap ket qua tra ve cac chuc nang search
+
+                if(isNaN(v)){
+                    output= list;
+                }
+                else{
+                   list.forEach(element => {
+                        
+                        if(element.mark >= v){
+                            output.push(element);
+
+                        }
+                    });
+                }
+                return output;
+
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>
