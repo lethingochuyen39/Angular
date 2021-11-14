@@ -1,0 +1,22 @@
+  header{
+      text-align: center;
+  }
+  footer{
+            text-align: center;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+        .menu{
+            border: black solid;
+            color: blue;
+            font-weight: bolder;  
+        }
+
+        a:hover{
+            background-color: rgb(57, 156, 57);
+            color: black;
+            font-weight: bolder;
+        }
+        span{
+            color: red;
+        }

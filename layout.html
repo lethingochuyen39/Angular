@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-route.min.js.map"></script>
+    <script src="js/layout.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtr">
+    <div class="container">
+        <header class="row">
+            <div class="col">
+                <h1>Sigle Page Application</h1>
+            </div>
+        </header>
+
+        <hr>
+        <nav class="row">
+            <div class="col">
+                <div class="menu">
+                    <nav class="nav justify-content-center">
+                        <a class="nav-link " href="#!/home">Home</a>
+                        <a class="nav-link" href="#!/food">Food</a>
+                        <a class="nav-link" href="#!/add">Add New Food</a>
+                        <a class="nav-link" href="#!/about">about</a>
+
+                    </nav>
+                </div>
+            </div>
+        </nav>
+
+        <hr>
+        <article class="row">
+            <div class="col">
+                <ng-view></ng-view>
+            </div>
+        </article>
+        <footer class="row">
+            <div class="col">
+                Fpt Aptech &copy; 2021. All right revered.
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
