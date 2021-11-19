@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="pretest.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <div class="container" ng-controller="myCtr">
+        <table class="menu">
+            <thead>
+                <tr>
+                  
+                    <th><a href="#!employee">Employee</a></th>
+                    <th><a href="#!add">Add New Employee</a></th>
+                    
+                </tr>
+            </thead>
+        </table>
+
+        <div ng-view></div>
+
+       
+
+        <script>
+            var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function ($routeProvider) {
+                $routeProvider
+    
+                    // .when("/", {
+                    //     templateUrl: "home.html"
+                    // })
+                    .when("/employee", {
+                        templateUrl: "employee.html"
+                    })
+                    .when("/add", {
+                        templateUrl: "add.html", 
+                    })
+
+            });
+
+
+            //lap trinh cho controller de lay data tu file
+            app.controller('myCtr', function ($scope, $http) {
+                $http.get("employees.json").then(function (response) {
+                    $scope.ds = response.data;
+                });
+           
+
+            $scope.remove = function (index){
+                if(confirm('Are you sure you want to delete this employee?')){
+                    $scope.ds.splice(index, 1)
+                }
+            }
+        });
+
+            //lap trinh cho su kien them 1 san pham moi, thuoc ve controller cua trang [add new food]
+            app.controller('myAbc', function ($scope) {
+                $scope.addRow = function () {
+                    $scope.ds.push({ "name": $scope.name, "department": $scope.department,"email":$scope.email });
+
+                }
+
+            });
+
+        </script>
+
+
+    </div>
+</body>
+
+</html>
