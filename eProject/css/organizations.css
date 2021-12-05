@@ -26,3 +26,19 @@
 body{
   font-size: 15px;
 }
+.image{
+  position:relative;
+  width:150px;
+  height:150px;
+  top:0.1px;
+  left:20px;
+  }
+  .image2{
+  height: 150px;
+  top:0.5px;
+  left:2000px;
+  }
+  h2{
+    font-weight: bolder;
+    color: goldenrod;
+  }

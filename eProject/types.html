@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/types.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
     </style>
@@ -58,7 +59,65 @@
         <div style="margin-top: 10rem;"></div>
     </div>
 
-   
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="w3-container">
+                    <div class="w3-dropdown-click">
+                        <button class="w3-button w3-black" onclick="dropFunction()">Dropdown</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card w3-light-grey" id="myDIV">
+                            <input class="w3-input w3-padding" type="text" placeholder="Search.." id="myInput"
+                                onkeyup="filterFunction()">
+                            <a class="w3-bar-item w3-button" href="contact.html">About</a>
+                            <a class="w3-bar-item w3-button" href="#base">Base</a>
+                            <a class="w3-bar-item w3-button" href="#blog">Blog</a>
+                            <a class="w3-bar-item w3-button" href="#contact">Contact</a>
+                            <a class="w3-bar-item w3-button" href="#custom">Custom</a>
+                            <a class="w3-bar-item w3-button" href="#support">Support</a>
+                            <a class="w3-bar-item w3-button" href="#tools">Tools</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-9">
+            <img src="img/img hazard/Exposure.jpg" alt="" width="100%">
+            
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        // Dropdown
+        function dropFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // Filter
+        function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDIV");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+
 
     <footer class="bg-dark text-center text-white " style="background-color: rgb(52, 52, 53); color: white;">
         <!-- Grid container -->
@@ -143,6 +202,7 @@
 
         <!-- Copyright -->
     </footer>
+
 
 </body>
 

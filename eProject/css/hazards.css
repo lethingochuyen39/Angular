@@ -24,5 +24,75 @@
     border-left: thin dotted gray;
 }
 body{
-  font-size: 15px;
+  background-color:whitesmoke;
+  font-size: 18px;
+  text-align: justify;
+  color: black;
+}
+
+
+h2{
+font-weight: bold;
+font-family: 'Bebas Neue', cursive;
+}
+
+h1{
+  font-family: 'Shojumaru', cursive;
+  text-align: center;
+}
+p,li{
+  font-family: 'Amiri', serif;
+}
+
+.what{
+  font-size: 18px;
+  margin-top: 1rem;
+  background-color: #007BFF;
+  color: aliceblue;
+  padding: 0.1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+
+}
+
+.danger{
+  font-size: 18px;
+  margin-top: 1rem;
+  background-color: red;
+  color: aliceblue;
+  padding: 0.1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.how{
+  font-size: 18px;
+  margin-top: 1rem;
+  background-color: #28A745;
+  color: aliceblue;
+  padding: 0.1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.content{
+  font-size: 18px;
+  margin-top: 1rem;
+  background-color: #5F6F75;
+  color: aliceblue;
+  padding: 0.1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.bodydiv{
+  margin-bottom: 3rem;
 }

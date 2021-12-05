@@ -57,6 +57,22 @@
         <!-- ket thuc khoi menu -->
         <div style="margin-top: 10rem;"></div>
     </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="history.html">History</a>
+        <a href="techniques.html">Techniques</a>
+        <a href="types.html">types</a>
+        <a href="hazards.html">Hazards</a>
+        <a href="history.html">History</a>
+        
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+        <h2>Collapsed Sidebar</h2>
+        <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+    </div>
+
 
 
     <footer class="bg-dark text-center text-white " style="background-color: rgb(52, 52, 53); color: white;">
@@ -70,9 +86,8 @@
                 <p><i> <img src="img/address.png" width="30px" alt=""></i> 590 Cach Mang Thang Tam, Ward 11,
                     District 3,
                     Ho Chi Minh City</p>
-
             </div>
-            <div class="col-md-6 text-center ">
+            <div class="col-md-6 text-center">
                 <strong style="margin-bottom: 1rem; display: inline-block;">Sign up for our newsletter</strong>
                 <form action="" onsubmit="return sendData();">
                     <div class="form-group ">
@@ -142,6 +157,19 @@
 
         <!-- Copyright -->
     </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
 
 </body>
 
