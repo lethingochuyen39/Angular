@@ -24,7 +24,7 @@
     border-left: thin dotted gray;
 }
 body{
-  font-size: 15px;
+  font-size: 18px;
 }
 .image{
   position:relative;
@@ -42,3 +42,15 @@ body{
     font-weight: bolder;
     color: goldenrod;
   }
+  .legend2{
+    text-align: right;
+    display: flex;
+    }
+    
+    legend{
+        text-align: left;
+        font-size: 30px;
+        font-weight: bold;
+        color: red;
+        text-shadow: 2px 1px 1px gray;
+        }
