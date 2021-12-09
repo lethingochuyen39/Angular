@@ -23,9 +23,6 @@
     border-right: thin dotted gray;
     border-left: thin dotted gray;
 }
-body{
-  font-size: 18px;
-}
 .image{
   position:relative;
   width:150px;
@@ -33,24 +30,18 @@ body{
   top:0.1px;
   left:20px;
   }
-  .image2{
-  height: 150px;
-  top:0.5px;
-  left:2000px;
-  }
-  h2{
-    font-weight: bolder;
-    color: goldenrod;
-  }
-  .legend2{
-    text-align: right;
-    display: flex;
+  
+  h1{
+      font-family: 'Shojumaru', cursive;
+      text-align: center;
+      color: orange;
+      font-weight: bold;
     }
     
-    legend{
-        text-align: left;
-        font-size: 30px;
-        font-weight: bold;
-        color: red;
-        text-shadow: 2px 1px 1px gray;
-        }
+  body{
+      font-size: 18px;
+  }
+  
+  p,li{
+      font-family: 'Amiri', serif;
+    }

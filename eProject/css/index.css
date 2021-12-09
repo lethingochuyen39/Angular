@@ -40,9 +40,22 @@ a:hover{
     color:mediumblue  ;
 }
 body{
-    font-size: 15px;
+    font-size: 18px;
 }
+
+li{
+    font-family: 'Amiri', serif;
+  }
+
 h3{
     color: blanchedalmond;
     text-shadow: 2px 1px 1px black;
 }
+
+
+h1{
+    font-family: 'Shojumaru', cursive;
+    text-align: center;
+    color: orange;
+    font-weight: bold;
+  }

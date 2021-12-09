@@ -1,3 +1,5 @@
+
+// contact page
 function readData() {
     var a = [];
     // name
@@ -15,14 +17,15 @@ function readData() {
         return false;
     }
 
-    a.push("Dubmitted successfully");
+    a.push("Submitted successfully");
     alert(a.join("\n"));
-}
 
-function sendData(){
+}
+// End contact page
+function sendDt(){
     var b=[];
 
-    let send = document.getElementById("email2").value;
+    let send = document.getElementById("send").value;
     let checkmail2 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,3})$/;
     if (!checkmail2.test(send)){
         alert("You entered the wrong Mail format !");
@@ -30,9 +33,10 @@ function sendData(){
     }
     b.push("Sign Up Success");
     alert(b.join("\n"));
-
+ 
 
 }
+
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
@@ -52,3 +56,4 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
